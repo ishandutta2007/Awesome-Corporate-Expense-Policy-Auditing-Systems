@@ -61,9 +61,9 @@ Corporate expense policy auditing platforms compare employee spending against in
 
 For organizations requiring self-hosted infrastructure, data sovereignty, explainable deterministic rule engines, or cost-effective compliance pipelines, these open-source tools offer robust building blocks. 🛠️
 
-Sorted in descending order by GitHub Stars: ⭐
+Sorted in descending order by GitHub_Stars: ⭐
 
-| Project | GitHub Stars | License | Description & Auditing Strengths |
+| Project | GitHub_Stars | License | Description & Auditing Strengths |
 | :--- | :---: | :---: | :--- |
 | **[frappe/erpnext](https://github.com/frappe/erpnext)** | [![Stars](https://img.shields.io/github/stars/frappe/erpnext?style=social&color=white)](https://github.com/frappe/erpnext/stargazers) | GPL-3.0 | 🏢 Full-featured ERP system featuring comprehensive Expense Claim modules, customizable multi-level approval matrices, cost center budget limits, and audit trails. |
 | **[invoiceninja/invoiceninja](https://github.com/invoiceninja/invoiceninja)** | [![Stars](https://img.shields.io/github/stars/invoiceninja/invoiceninja?style=social&color=white)](https://github.com/invoiceninja/invoiceninja/stargazers) | Elastic License 2.0 | 🧾 Leading self-hosted invoice and expense tracking application with receipt capture, vendor management, currency conversion, and automated category matching. |
