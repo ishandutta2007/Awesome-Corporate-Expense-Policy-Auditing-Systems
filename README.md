@@ -1,199 +1,123 @@
-# Awesome-Corporate-Expense-Policy-Auditing-Systems
+# Awesome Corporate Expense Policy Auditing Systems
 
-## Top Corporate Expense Policy Auditing Systems Ecosystem
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/ishandutta2007/Awesome-Corporate-Expense-Policy-Auditing-Systems/pulls)
 
-
-
-**Curated List of SaaS Products & Open-Source GitHub Projects**
-
-*Focused on Real-Time Policy Enforcement, Anomaly Detection & Spend Risk Intelligence*
-
-**Last updated: March 2026**
-
-
-
-This repository tracks notable **SaaS platforms** and **open-source projects** for **Corporate Expense Policy Auditing**. These tools continuously compare employee spending data to real-time company rules—catching policy violations, duplicate submissions, and fraud before reimbursement, not after.
-
-
-
-**Examples** include AppZen, Oversight, Ramp, Brex, SAP Concur, Coupa, Emburse, Expensify, Navan, and Airbase (the category leaders).
-
-
-
-**Open-source emphasis**: This section is heavily expanded with every major active project for self-hosting, deterministic rule engines, and open expense workflows—ideal for finance teams, auditors, and developers seeking transparent, vendor-independent expense policy enforcement.
-
-
-
-Contributions welcome! Open a PR to add/update entries. Keep descriptions factual and link to official sites.
-
-
-
-## Table of Contents
-
-- [SaaS/Hosted Platforms](#saas-hosted-platforms)
-
-- [Open-Source GitHub Projects](#open-source-github-projects)
-
-- [How to Contribute](#how-to-contribute)
-
-- [Disclaimer](#disclaimer)
-
-
-
-## SaaS/Hosted Platforms
-
-
-
-- **[AppZen](https://www.appzen.com/)**
-
-  The market leader in AI-powered expense audit, used by Toyota and T.D. Williamson. Toyota's implementation flagged 38,000 reports for review—35,500 more than the legacy $10,000 threshold rule caught. Real results: $378,000 in duplicate submissions caught in 2025 alone; nearly $400,000 saved from cash line validation (catching employees submitting corporate Amex charges as out-of-pocket) . T.D. Williamson reduced manual reviews by 65%, processing 9,000 reports with just three auditors . AppZen pairs with any T&E system—no need to switch your existing expense platform .
-
-
-
-- **[Oversight](https://www.oversight.com/)**
-
-  Pioneering **Finance Risk Intelligence (FRI)** with a next-generation AI platform built on AWS and Databricks. Monitors 100% of enterprise spend across T&E, P-Card, procurement, and AP/P2P systems. Layered architecture: Processing (ingest/normalize), Intelligence (anomaly detection via ML and domain-specific AI models), and Action (guided workflows, role-based routing, autonomous resolution) . **50% of clients adopted ML-driven autonomous resolution** with 96-99% accuracy. Clients report average savings of **3.5% of total expenses** (range 0.5% to over 5%) . Detects fake receipt detection and duplicate submissions with explainable AI .
-
-
-
-- **[Ramp](https://ramp.com/)**
-
-  Finance automation platform with built-in expense policy controls and AI-powered auditing. Features real-time card restrictions, receipt matching, and automatic policy enforcement at the point of transaction.
-
-
-
-- **[Brex](https://brex.com/)**
-
-  Corporate card and spend management platform. Note: Productboard's experience (via Paylocity case study) illustrates a common gap—Brex provided card limits but **visibility into spend only happened after it was committed**, with no pre-spend approval for categories like software purchases .
-
-
-
-- **[SAP Concur](https://www.concur.com/)**
-
-  Enterprise T&E platform with audit rules, expense policy enforcement, and integration with Concur Detect for anomaly detection.
-
-
-
-- **[Coupa](https://www.coupa.com/)**
-
-  Business spend management platform with expense policy controls, pre-approved spend, and AI-powered audit capabilities.
-
-
-
-- **[Emburse](https://www.emburse.com/)**
-
-  Launched **Emburse Assurance** (April 2026) as an AI-powered compliance add-on. Unique approach: **Proactive Alerts during receipt capture** (before submission), **Pre-Submission Feedback** requiring explanations for out-of-policy expenses, and **Post-Submission Checks** for fraud detection. Translates receipts from any language into 32 supported languages. **Over 90% positive feedback from early adopters** .
-
-
-
-- **[Expensify](https://www.expensify.com/)**
-
-  Workspace Rules enforce policy at the point of purchase, not just at submission. **Real-time card spend controls** approve or decline transactions at authorization. Features merchant-level blocking, category spend limits, and **Agent Rules** (AI-powered natural-language rules for routing and approvals) . Built-in protections always decline charges for adult services, ATMs, gambling, and money transfers .
-
-
-
-- **[Navan](https://navan.com/)**
-
-  Global AI-powered business travel and expense platform. Enhanced policy controls (August 2026) apply **granular policy logic within search and booking**—tailoring flight cost limits, cabin eligibility, and upgrade rules by traveler group and flight duration. Features **dynamic, market-aware spending limits** that replace rigid price caps .
-
-
-
-- **[Airbase (Paylocity)](https://www.airbase.com/)**
-
-  Spend management platform with **advanced approvals**—customizable, contingent routing sequences for purchase approvals. Productboard's use case: routing all software purchases to the security team first for signoff before purchase . Features pre-approvals before purchase, policy enforcement embedded in the platform, and cards created for exact amount/vendor/timeframe .
-
-
-
-## Open-Source GitHub Projects
-
-
-
-- **[NexAudit](https://github.com/Edd1eOS/NexAudit)**
-
-  Lightweight, explainable expense auditing—**OCR + rule engine + controlled AI. Every flag comes with exactly why**. Upload expense spreadsheets (CSV) and receipt images; the system performs OCR extraction, applies audit rules, and flags suspicious entries. Detects duplicate expenses, amount mismatches, and missing receipts. Outputs structured audit report with **OK / Flagged / Uncertain** statuses . Explicitly designed as an **auditor assistant, not a replacement**—final judgment stays human. Deterministic JSON-configured rule engine keeps AI controlled . **The most directly applicable open-source expense policy auditor available.**
-
-
-
-- **[FinPilot](https://github.com/Abhinavhaldiya/FinPilot)**
-
-  Enterprise-grade expense approval system with secure workflows. Employees submit claims, managers approve, finance teams validate and settle. Features **multi-level approvals** based on amount thresholds, **role-based access** (Employee, Manager, HR, Finance), receipt OCR for automatic data extraction, multi-currency support, and complete audit trails. Tech stack: React, TypeScript, Node.js, Express, PostgreSQL, Prisma . Built for enterprise teams with GDPR compliance and JWT authentication .
-
-
-
-- **[Zemio](https://github.com/zemio-co/zemio)**
-
-  Open-source, self-hostable expense management for student initiatives and associations. Handles full lifecycle: **Draft → Pending Approval → Needs Revision / Accepted / Rejected → Paid**. Features receipt attachments (up to 5 files), **multi-tenant organizations** with role management, **Microsoft OAuth** with tenant mapping, **encrypted banking details** snapshotted immutably at submission, cost unit budget tracking, and **audit trail** tracking changes across reports and expenses . MIT licensed and self-hostable .
-
-
-
-- **[Rever](https://github.com/rever-ai/rever)**
-
-  Open-source AI finance application that sits on top of your books and **audits them in real time to ensure financial accuracy**. v0.4.0 adds **multi-level approvals** (validated bills flow through tiered approval chains), **PO reversals** with quantity support, and in-app notifications. Earlier releases include **2-way bill-to-PO matching** with complete audit history, duplicate bill and invalid document detection on ingestion, and master data management . Built in the open with active community feedback.
-
-
-
-### Additional Strong Open-Source Options
-
-
-
-- **[CashFlow](https://github.com/noahcoffey/CashFlow)** — Local-first personal finance app (Next.js, SQLite) with **conditional rules engine for auto-categorizing transactions by description, amount, or account with regex support**. Features merchant aliases, recurring detection, bank reconciliation, and AI insights via Claude CLI. All data stays on your machine .
-
-- **[finn-tracker](https://pypi.org/project/finn-tracker/)** — Fully local expense tracker with **200+ static categorization rules across 15 categories**, manual overrides persisted as reusable rules, MCP server for AI tool integration, and local LLM chat assistant. No data leaves your machine .
-
-- **[canhoto](https://pypi.org/project/canhoto/)** — Local-first expense categorization engine with **rule-based categorization** (regex patterns, amount ranges, direction filters) and merchant memory. Manual overrides never change automatically .
-
-- **[python-finance-automation](https://github.com/pakagronglb/python-finance-automation)** — Personal finance automation tool with automatic transaction categorization based on keywords, custom categories, and interactive spending charts. All processing local .
-
-- Community **n8n** workflows for expense alert routing and policy violation notifications.
-
-
-
-**Frameworks for building custom systems**: Combine **NexAudit** for OCR + deterministic rule engine auditing with **FinPilot** for multi-level approval workflows, **Zemio** for multi-tenant expense lifecycle management, **Rever** for bill-to-PO matching and real-time book auditing, and **PostgreSQL** for persistence—creating a fully self-hosted, enterprise-grade expense policy auditing platform.
-
-
-
-## How to Contribute
-
-
-
-1. Fork the repo.
-
-2. Add/edit entries in `README.md` (follow existing format).
-
-3. Include: name, link, 1–2 sentence description, and whether it's SaaS or open-source.
-
-4. Submit PR with a short explanation.
-
-
-
-Star the repo if you find it useful!
-
-
-
-## Disclaimer
-
-
-
-- This is a **community-curated** list — not exhaustive and not an endorsement.
-
-- Expense auditing systems handling financial data must comply with data protection regulations (GDPR, CCPA, PCI-DSS) and internal financial controls.
-
-- **Open-source expense auditing is emerging but fragmented.** NexAudit provides OCR + rule engine auditing . FinPilot handles approval workflows . Zemio handles expense lifecycle . Rever handles bill-to-PO matching . **No single open-source tool provides the end-to-end FRI platform of Oversight or the policy enforcement breadth of AppZen.** Integration work is required.
-
-- **"Real-time" enforcement beats post-submission review.** Toyota's experience shows that manager-only review is inconsistent—some rubber-stamp, others scrutinize $5 tips . Expensify's card controls approve/decline at authorization . Emburse's Proactive Alerts flag issues during receipt capture . The earlier you catch it, the less rework.
-
-- **AI-generated receipts are a new threat.** Emburse Assurance specifically detects AI-generated or altered receipts . Oversight offers fake receipt detection . Open-source tools must evolve to catch synthetic evidence.
-
-- **Vague policies produce inconsistent behavior.** Toyota's T&E policy was intentionally vague—"should" and "expected to" rather than "cannot." AppZen's data showed that when broad groups had the same flags, it was an **ambiguity problem, not an employee problem**. Policy language has since grown from 13 to 16 pages, every addition driven by data .
-
-- Self-hosted open-source solutions require proper security hardening, OCR pipeline management, and ongoing maintenance. Expense data is financially sensitive—access controls and audit trails are essential.
-
-
+> A curated directory of enterprise SaaS platforms, AI-driven spend governance tools, and open-source corporate expense policy auditing systems designed for real-time policy enforcement, automated compliance checks, duplicate detection, and financial risk intelligence.
 
 ---
 
+## Table of Contents
 
+- [Sector Overview & Market Dynamics](#sector-overview--market-dynamics)
+- [Enterprise SaaS & Hosted Platforms](#enterprise-saas--hosted-platforms)
+- [Open-Source GitHub Projects](#open-source-github-projects)
+- [Additional Open-Source Tools & Libraries](#additional-open-source-tools--libraries)
+- [Architecture Blueprint for Custom Auditing](#architecture-blueprint-for-custom-auditing)
+- [How to Contribute](#how-to-contribute)
+- [Disclaimer & Best Practices](#disclaimer--best-practices)
 
-**Made for finance teams, auditors, expense administrators, and developers building transparent expense policy solutions.**
+---
 
-Let's make Corporate Expense Policy Auditing more open, data-driven, and policy-consistent.
+## Sector Overview & Market Dynamics
+
+The global Corporate Travel & Expense (T&E) and spend management software sector is valued between **$3.8 billion and $5.4 billion** and is projected to exceed **$11 billion by the early 2030s**, growing at a compound annual growth rate (CAGR) of 11%–16%. 
+
+The market remains **moderately to highly fragmented** rather than a winner-take-all monopoly: legacy enterprise ERP giants (SAP Concur, Coupa) anchor Fortune 500 workflows, specialized AI audit intelligence layers (AppZen, Oversight) monitor cross-system risks, and agile fintech unicorns (Ramp, Brex, Navan) drive rapid consolidation across mid-market corporate cards and real-time pre-spend authorization.
+
+---
+
+## Enterprise SaaS & Hosted Platforms
+
+Corporate expense policy auditing platforms compare employee spending against internal policies, receipt evidence, and tax regulations in real time. The table below outlines the category leaders, sorted in descending order by enterprise size (valuation / revenue scale):
+
+| Platform | Company Size (Valuation / Revenue) | Starting Pricing Tier | Free Tier & Trial Limits | Core Auditing & Policy Capabilities |
+| :--- | :--- | :--- | :--- | :--- |
+| **[SAP Concur](https://www.concur.com/)** | **$8.3B** acquisition by SAP SE (~$36B+ Cloud ERP revenue) | **$7.00** per expense report (*Base plan*, unlimited users) | **No self-serve free tier**; guided live interactive demo & proof-of-concept sandbox available upon sales request. | Native enterprise T&E compliance engine, automated policy exception flags, OCR receipt verification, and Concur Detect AI anomaly audits. |
+| **[Coupa](https://www.coupa.com/)** | **$8.0B** valuation (acquired by Thoma Bravo; ~$800M+ ARR) | **~$2,500/mo** (typical mid-market starting tier entry, ~$15k–$30k/yr) | **No free tier** for buyer platform; free supplier portal available; 30-day guided enterprise PoC through sales. | Comprehensive Business Spend Management (BSM), pre-spend approval workflows, fraud detection, and AI-powered contract/expense policy enforcement. |
+| **[Navan](https://navan.com/)** | **$6.1B** market cap (Nasdaq: NAVN; ~$860M revenue) | **$15.00** per active user/month (for expense module beyond free tier) | **Free forever for first 5 active users/month** (for companies ≤300 employees); unlimited free travel booking. | Dynamic market-rate travel caps, automated receipt matching, custom booking policy rules, and proactive out-of-policy approval workflows. |
+| **[Brex](https://brex.com/)** | **$5.15B** valuation (acquired by Capital One; ~$500M+ ARR) | **$12.00** per user/month (*Premium plan*; custom for Enterprise) | **Free forever plan (Essentials)**: supports up to 2 legal entities, basic AI spend rules, global cards, and standard accounting sync. | Real-time card authorization restrictions, autonomous receipt reconciliation, custom manager approval hierarchies, and multi-currency expense controls. |
+| **[Emburse](https://www.emburse.com/)** | **$1.0B+** valuation (~$300M+ annual revenue; K1 Investment) | **$8.00** per user/month (*Emburse Spend*, 15-user min floor = $120/mo) | **30-day free trial** available for Emburse Spend (full card controls and expense workflows without initial lock-in). | Emburse Assurance AI compliance add-on, proactive warnings during mobile receipt capture, multi-language OCR (32 languages), and synthetic receipt detection. |
+| **[AppZen](https://www.appzen.com/)** | **$500M+** valuation (Series D; ~$95M ARR) | **~$3.00** per employee/month (enterprise contracts start ~$25,000/yr) | **No public free tier**; offers tailored sandbox product evaluations and historical expense audit sample runs upon request. | Market pioneer in AI expense auditing; inspects 100% of receipts before reimbursement, validates IRS/HMRC cross-border compliance, and detects duplicate/out-of-policy claims. |
+| **[Airbase (Paylocity)](https://www.airbase.com/)** | **$325M** acquisition by Paylocity (~$70M ARR) | **Custom quote** (historically ~$350/mo base for growth tiers) | **Free baseline tier** available for early-stage startups and small businesses (free bill pay, basic approvals, and card issuing). | Advanced purchase approvals with contingent multi-department routing (e.g., IT/Security signoff), virtual card authorization limits, and dual-entry accounting sync. |
+| **[Expensify](https://www.expensify.com/)** | **$210M** market cap (Nasdaq: EXFY; ~$140M TTM revenue) | **$5.00** per member/month (*Collect plan*; $9/member/month for *Control plan*) | **Free forever plan**: unlimited SmartScan receipt OCR for individuals; free 6-week workspace onboarding trial for teams. | Workspace Rules with merchant-category blocking, authorization-time card declines, AI Agent Rules for natural language routing, and multi-tier manager approvals. |
+| **[Oversight](https://www.oversight.com/)** | **~$200M–$300M** estimated valuation (TCV majority backed; ~$45M ARR) | **Custom enterprise contract** (scales by transaction volume, typically $30k+/yr) | **No self-serve free tier**; custom ROI proof-of-value analysis conducted using historical company transaction data. | Enterprise Finance Risk Intelligence (FRI) across T&E, P-Cards, and AP; detects forged receipts, splits, and duplicate invoices with 96%–99% automated ML accuracy. |
+| **[Ramp](https://ramp.com/)** | **High-Growth Fintech Leader** (scales via card interchange volume) | **$15.00** per user/month (*Ramp Plus*; custom for Enterprise) | **Free forever core plan**: $0/mo/user with corporate cards, receipt matching, bill pay, accounting sync, and automated policy controls. | Real-time card transaction enforcement, automated receipt matching via SMS/email, dynamic per-diem category limits, and vendor-level restrictions. |
+
+---
+
+## Open-Source GitHub Projects
+
+For organizations requiring self-hosted infrastructure, data sovereignty, explainable deterministic rule engines, or cost-effective compliance pipelines, these open-source tools offer robust building blocks.
+
+Sorted in descending order by GitHub Stars:
+
+| Project | GitHub Stars | License | Description & Auditing Strengths |
+| :--- | :---: | :---: | :--- |
+| **[frappe/erpnext](https://github.com/frappe/erpnext)** | [![Stars](https://img.shields.io/github/stars/frappe/erpnext?style=social&color=white)](https://github.com/frappe/erpnext/stargazers) | GPL-3.0 | Full-featured ERP system featuring comprehensive Expense Claim modules, customizable multi-level approval matrices, cost center budget limits, and audit trails. |
+| **[invoiceninja/invoiceninja](https://github.com/invoiceninja/invoiceninja)** | [![Stars](https://img.shields.io/github/stars/invoiceninja/invoiceninja?style=social&color=white)](https://github.com/invoiceninja/invoiceninja/stargazers) | Elastic License 2.0 | Leading self-hosted invoice and expense tracking application with receipt capture, vendor management, currency conversion, and automated category matching. |
+| **[Expensify/App](https://github.com/Expensify/App)** | [![Stars](https://img.shields.io/github/stars/Expensify/App?style=social&color=white)](https://github.com/Expensify/App/stargazers) | MIT | The open-source client codebase behind New Expensify. Modern cross-platform architecture supporting receipt scanning, chat-driven expense reporting, and workspace policy rules. |
+| **[bigcapitalhq/bigcapital](https://github.com/bigcapitalhq/bigcapital)** | [![Stars](https://img.shields.io/github/stars/bigcapitalhq/bigcapital?style=social&color=white)](https://github.com/bigcapitalhq/bigcapital/stargazers) | AGPL-3.0 | Modern open-source accounting suite featuring built-in expense management, role-based access control, transaction categorization, and financial report validation. |
+| **[makerever/rever](https://github.com/makerever/rever)** | [![Stars](https://img.shields.io/github/stars/makerever/rever?style=social&color=white)](https://github.com/makerever/rever/stargazers) | Apache-2.0 | Open-source AI finance agent that audits ledgers in real time. Features 2-way bill-to-PO matching, duplicate bill detection on ingestion, and multi-tier approval routing. |
+| **[Abhinavhaldiya/FinPilot](https://github.com/Abhinavhaldiya/FinPilot)** | [![Stars](https://img.shields.io/github/stars/Abhinavhaldiya/FinPilot?style=social&color=white)](https://github.com/Abhinavhaldiya/FinPilot/stargazers) | MIT | Enterprise-grade expense approval system with role-based routing (Employee, Manager, HR, Finance), threshold-based approval chains, receipt OCR, and immutable audit logging. |
+| **[mscbuild/nanoagent-compliance-hub](https://github.com/mscbuild/nanoagent-compliance-hub)** | [![Stars](https://img.shields.io/github/stars/mscbuild/nanoagent-compliance-hub?style=social&color=white)](https://github.com/mscbuild/nanoagent-compliance-hub/stargazers) | MIT | Multi-agent expense auditing platform demonstrating autonomous compliance checks, automated anomaly detection, and human-in-the-loop review queues. |
+| **[SuperGitlab/ai-expense-auditor](https://github.com/SuperGitlab/ai-expense-auditor)** | [![Stars](https://img.shields.io/github/stars/SuperGitlab/ai-expense-auditor?style=social&color=white)](https://github.com/SuperGitlab/ai-expense-auditor/stargazers) | Apache-2.0 | AI-driven expense reimbursement auditor combining LangGraph multi-agent orchestration, RAG on company policy manuals, and deterministic rule validation. |
+| **[Edd1eOS/NexAudit](https://github.com/Edd1eOS/NexAudit)** | [![Stars](https://img.shields.io/github/stars/Edd1eOS/NexAudit?style=social&color=white)](https://github.com/Edd1eOS/NexAudit/stargazers) | MIT | Lightweight, explainable expense auditor combining OCR and a JSON rule engine. Flags duplicate submissions, tax calculation errors, and threshold violations with explicit explanations. |
+| **[zemio-co/zemio](https://github.com/zemio-co/zemio)** | [![Stars](https://img.shields.io/github/stars/zemio-co/zemio?style=social&color=white)](https://github.com/zemio-co/zemio/stargazers) | MIT | Self-hostable expense tracker with multi-tenant permissions, Microsoft OAuth integration, multi-stage approval lifecycles, and cost unit budget tracking. |
+| **[noahcoffey/CashFlow](https://github.com/noahcoffey/CashFlow)** | [![Stars](https://img.shields.io/github/stars/noahcoffey/CashFlow?style=social&color=white)](https://github.com/noahcoffey/CashFlow/stargazers) | MIT | Local-first financial application with a regex-capable conditional rules engine for auto-categorization and transaction policy evaluation. |
+| **[pakagronglb/python-finance-automation](https://github.com/pakagronglb/python-finance-automation)** | [![Stars](https://img.shields.io/github/stars/pakagronglb/python-finance-automation?style=social&color=white)](https://github.com/pakagronglb/python-finance-automation/stargazers) | MIT | Python automation script suite for transaction keyword categorization, recurring expense identification, and budget monitoring. |
+
+---
+
+## Additional Open-Source Tools & Libraries
+
+- **[finn-tracker](https://pypi.org/project/finn-tracker/)** — Local expense engine featuring 200+ rule presets across 15 categories with custom rule persistence and MCP server support for LLMs.
+- **[canhoto](https://pypi.org/project/canhoto/)** — Rule-driven expense categorization library supporting regex rules, threshold filters, and persistent merchant memory.
+- **[n8n Workflow Templates](https://n8n.io/)** — Open-source automation workflows connecting OCR webhooks to Slack/Teams alerts for out-of-policy expense submissions.
+
+---
+
+## Architecture Blueprint for Custom Auditing
+
+Engineering teams seeking to build a custom, vendor-independent expense auditing platform can combine best-of-breed open-source modules:
+
+```mermaid
+flowchart TD
+    A["Receipt Capture & Invoice Ingestion\n(OCR / Mobile App / Webhook)"] --> B["Document Parsing & Entity Extraction\n(NexAudit / Tesseract / LayoutLM)"]
+    B --> C{"Deterministic Policy Rules Engine\n(Thresholds, Per Diems, Blacklists)"}
+    C -- "Violations Detected" --> D["AI Explainability & Anomaly Scoring\n(SuperGitlab / NexAudit Controlled AI)"]
+    C -- "Compliant" --> E["Automated Approval & Ledger Sync\n(FinPilot / ERPNext / Rever)"]
+    D --> F["Auditor Human-in-the-Loop Review Queue\n(Flagged with Reason Codes)"]
+    F -- "Manual Approval" --> E
+    F -- "Rejected / Inquiry" --> G["Employee Notification & Resubmission"]
+```
+
+1. **Ingestion & Extraction:** Extract vendor, transaction date, line items, and tax via **NexAudit OCR** or **Expensify/App**.
+2. **Deterministic Validation:** Enforce strict per-diem limits, receipt requirements, and merchant categories before invoking AI.
+3. **Approval Lifecycle & Settlement:** Route flagged exceptions through **FinPilot** or **ERPNext** multi-stage approval hierarchies.
+4. **PO & Duplicate Matching:** Utilize **Rever** for two-way invoice-to-PO reconciliation and historical ledger checks.
+
+---
+
+## How to Contribute
+
+We welcome additions of new tools, rule engines, and case studies!
+
+1. Fork this repository.
+2. Add or update entries following the established table schema and badge conventions.
+3. Ensure all links point to authoritative platform sites or GitHub repositories.
+4. Open a Pull Request with a clear summary of your changes.
+
+---
+
+## Disclaimer & Best Practices
+
+- **Regulatory Compliance:** Expense auditing software handles confidential personal and financial data. Self-hosted deployments must adhere to GDPR, CCPA, PCI-DSS, and internal financial controls (SOX Section 404).
+- **Enforce Real-Time Over Post-Reimbursement:** Frontline prevention (at authorization or mobile receipt capture) saves up to 70% of auditing overhead compared to retroactive quarterly audits.
+- **AI Receipts & Synthetic Fraud:** As generative AI receipt generation evolves, combine metadata validation (EXIF inspection, vendor merchant ID checks) with deterministic OCR cross-referencing.
+- **Clarify Policy Ambiguity:** Data shows that most expense flags stem from ambiguous policy language (e.g., "reasonable dinner expenses") rather than malicious intent. Codify quantitative limits into your rule engines.
+
+---
+
+*Curated with precision for finance leaders, internal auditors, CFOs, and software engineers building transparent spend compliance infrastructure.*
